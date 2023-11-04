@@ -1,0 +1,20 @@
+//---------------------------------------------------------------------------
+
+#ifndef UVectorH
+#define UVectorH
+//---------------------------------------------------------------------------
+
+const int LONGMAX = 200;
+class CVector{
+	private:
+		int dimension;
+		int vector[LONGMAX];
+	public:
+		CVector();
+		int getDimension();
+		void setDimension(int valor);
+		int getElemento(int posicion);
+		void setElemento(int posicion, int elemento);
+};
+
+#endif
