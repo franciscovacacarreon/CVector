@@ -59,11 +59,3 @@ void __fastcall TForm1::Devolverelementorepetido1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::intercalar1Click(TObject *Sender)
-{
-	cargarSGVector(SGVector, vector1);
-	vector1->intercalarImparesPares();
-	mostrarSGVector(SGVector, vector1);
-}
-//---------------------------------------------------------------------------
-

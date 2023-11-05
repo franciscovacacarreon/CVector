@@ -91,8 +91,8 @@ object Form1: TForm1
     TabOrder = 5
   end
   object MainMenu1: TMainMenu
-    Left = 440
-    Top = 232
+    Left = 368
+    Top = 288
     object Funciones1: TMenuItem
       Caption = 'Funciones'
       object Devolverelementorepetido1: TMenuItem
@@ -102,10 +102,6 @@ object Form1: TForm1
     end
     object Procedimientos1: TMenuItem
       Caption = 'Procedimientos'
-      object intercalar1: TMenuItem
-        Caption = 'intercalar'
-        OnClick = intercalar1Click
-      end
     end
   end
 end

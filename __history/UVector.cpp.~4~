@@ -58,33 +58,6 @@ int CVector::devolverElementoRepetido() {
 	return elemento;
 }
 
-void CVector::intercalarImparesPares() {
-	for (int i = 0; i < dimension; i++) {
-		if (i % 2 == 0  &&  vector[i] % 2 == 0) {
-			for (int j = i + 1; j < dimension; j++) {
-				if (vector[j] % 2 != 0) {
-					intercambiar(i, j);
-					break;
-				}
-			}
-		} else {
-			if (i % 2 != 0  &&  vector[i] % 2 != 0) {
-				for (int j = i +1; j < dimension; j++) {
-					if (vector[j] % 2 == 0) {
-						intercambiar(i, j);
-						break;
-					}
-				}
-			}
-		}
-	}
-}
-
-void CVector::intercambiar(int pos1, int pos2){
-	int aux = vector[pos1];
-	vector[pos1] = vector[pos2];
-	vector[pos2] = aux;
-}
 
 
 

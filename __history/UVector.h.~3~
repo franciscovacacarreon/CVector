@@ -15,9 +15,6 @@ class CVector{
 		void setDimension(int valor); //modifica la dimensión actual
 		int getElemento(int posicion); //retorna un elemento del vector
 		void setElemento(int posicion, int elemento); //modifica un elemento del vector
-		int devolverElementoRepetido();
-		void intercalarImparesPares();
-		void intercambiar(int pos1, int pos2);
 };
 
 #endif

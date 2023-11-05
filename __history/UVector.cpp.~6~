@@ -68,7 +68,7 @@ void CVector::intercalarImparesPares() {
 				}
 			}
 		} else {
-			if (i % 2 != 0  &&  vector[i] % 2 != 0) {
+			if (i % 2 != 0  &&  vector[i] != 0) {
 				for (int j = i +1; j < dimension; j++) {
 					if (vector[j] % 2 == 0) {
 						intercambiar(i, j);
