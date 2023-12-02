@@ -23,9 +23,6 @@ class CVector{
 		void eliminarPrimos();
 		void eliminarMultiplos(int num);
 		int sumarPosicionImpar();
-		void voltearVector();
-		int devolverMayor();
-		void paresDerecha();
 };
 
 #endif

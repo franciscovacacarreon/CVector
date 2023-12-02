@@ -101,18 +101,3 @@ void __fastcall TForm1::Voltearvector1Click(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
-void __fastcall TForm1::DevolverMayor1Click(TObject *Sender)
-{
-	cargarSGVector(SGVector, vector1);
-	EResultado->Text = vector1->devolverMayor();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TForm1::Paresaladerecha1Click(TObject *Sender)
-{
-	cargarSGVector(SGVector, vector1);
-	vector1->paresDerecha();
-	mostrarSGVector(SGVector, vector1);
-}
-//---------------------------------------------------------------------------
-

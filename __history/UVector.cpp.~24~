@@ -68,7 +68,7 @@ void CVector::intercalarImparesPares() {
 				}
 			}
 		} else {
-			if (i % 2 != 0  &&  vector[i] != 0) {
+			if (i % 2 != 0  &&  vector[i] % 2 != 0) {
 				for (int j = i +1; j < dimension; j++) {
 					if (vector[j] % 2 == 0) {
 						intercambiar(i, j);
@@ -84,6 +84,90 @@ void CVector::intercambiar(int pos1, int pos2){
 	int aux = vector[pos1];
 	vector[pos1] = vector[pos2];
 	vector[pos2] = aux;
+}
+
+bool CVector::esPrimo(int numero){
+   bool resultado = true;
+	if (numero <= 1) {
+		resultado = false;
+	}
+	for (int i = 2; i <= sqrt(numero)  &&  resultado == true; i++) {
+		if (numero % i == 0) {
+			resultado = false;
+			break;
+		}
+	}
+	return resultado;
+}
+
+void CVector::eliminar(int pos) {
+	if (pos >= 0  &&  pos < dimension) {
+		for (int i = pos; i < dimension - 1; i++){
+			vector[i] =  vector[i + 1];
+		}
+		dimension = dimension - 1;
+	} else {
+		ShowMessage("Longitud de posición no válida.");
+	}
+}
+
+void CVector::eliminarPrimos() {
+	for (int i = 0; i < dimension; i++) {
+		if (esPrimo(vector[i]) == true) {
+			eliminar(i);
+			i--;
+		}
+	}
+}
+
+void CVector::eliminarMultiplos(int num) {
+	for (int i = 0; i < dimension; i++) {
+		if (vector[i] % num == 0) {
+			eliminar(i);
+			i--;
+		}
+	}
+}
+
+int CVector::sumarPosicionImpar() {
+	int sum = 0;
+	for (int i = 0; i < dimension; i++) {
+		if (i % 2 != 0) {
+			sum = sum + vector[i];
+		}
+	}
+	return sum;
+}
+
+void CVector::voltearVector() {
+	int j = dimension - 1;
+	for (int i = 0; i < dimension / 2; i++) {
+		intercambiar(i, j);
+		j--;
+	}
+}
+
+int CVector::devolverMayor(){
+	int mayor = 0;
+	for (int i = 0; i < dimension; i++) {
+		if (vector[i] > mayor) {
+			mayor = vector[i];
+		}
+	}
+	return mayor;
+}
+
+void CVector::paresDerecha() {
+	 for (int i = 0; i < dimension; i++) {
+		if (vector[i] % 2 != 0) {
+			for (int j = i + 1; j < dimension; j++) {
+				if (vector[j] % 2 == 0) {
+					intercambiar(i, j);
+					break;
+				}
+			}
+		}
+	 }
 }
 
 

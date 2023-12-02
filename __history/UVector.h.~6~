@@ -21,11 +21,6 @@ class CVector{
 		bool esPrimo(int numero);
 		void eliminar(int pos);
 		void eliminarPrimos();
-		void eliminarMultiplos(int num);
-		int sumarPosicionImpar();
-		void voltearVector();
-		int devolverMayor();
-		void paresDerecha();
 };
 
 #endif

@@ -77,42 +77,10 @@ void __fastcall TForm1::eliminarPrimos1Click(TObject *Sender)
 
 void __fastcall TForm1::Eliminarmltiplos1Click(TObject *Sender)
 {
-	int numero = StrToInt(ENumero->Text);
+	int numero = StrToInt(ENumero->Text));
 	cargarSGVector(SGVector, vector1);
 	vector1->eliminarMultiplos(numero);
-	mostrarSGVector(SGVector, vector1);
-}
-//---------------------------------------------------------------------------
-
-
-void __fastcall TForm1::sumaimpares1Click(TObject *Sender)
-{
-	cargarSGVector(SGVector, vector1);
-	EResultado->Text = vector1->sumarPosicionImpar();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TForm1::Voltearvector1Click(TObject *Sender)
-{
-	cargarSGVector(SGVector, vector1);
-	vector1->voltearVector();
-	mostrarSGVector(SGVector, vector1);
-}
-//---------------------------------------------------------------------------
-
-
-void __fastcall TForm1::DevolverMayor1Click(TObject *Sender)
-{
-	cargarSGVector(SGVector, vector1);
-	EResultado->Text = vector1->devolverMayor();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TForm1::Paresaladerecha1Click(TObject *Sender)
-{
-	cargarSGVector(SGVector, vector1);
-	vector1->paresDerecha();
-	mostrarSGVector(SGVector, vector1);
+   	mostrarSGVector(SGVector, vector1);
 }
 //---------------------------------------------------------------------------
 

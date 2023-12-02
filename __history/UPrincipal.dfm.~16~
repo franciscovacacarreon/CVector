@@ -113,14 +113,6 @@ object Form1: TForm1
         Caption = 'Devolver elemento repetido'
         OnClick = Devolverelementorepetido1Click
       end
-      object sumaimpares1: TMenuItem
-        Caption = 'Sumar posici'#243'n impar'
-        OnClick = sumaimpares1Click
-      end
-      object DevolverMayor1: TMenuItem
-        Caption = 'Devolver Mayor'
-        OnClick = DevolverMayor1Click
-      end
     end
     object Procedimientos1: TMenuItem
       Caption = 'Procedimientos'
@@ -135,14 +127,6 @@ object Form1: TForm1
       object Eliminarmltiplos1: TMenuItem
         Caption = 'Eliminar m'#250'ltiplos'
         OnClick = Eliminarmltiplos1Click
-      end
-      object Voltearvector1: TMenuItem
-        Caption = 'Voltear vector'
-        OnClick = Voltearvector1Click
-      end
-      object Paresaladerecha1: TMenuItem
-        Caption = 'Pares a la derecha'
-        OnClick = Paresaladerecha1Click
       end
     end
   end

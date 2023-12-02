@@ -163,16 +163,6 @@ void CVector::paresDerecha() {
 	int contadorPar = 0;
 	int contadorImpar = 0;
 
-	//Pares
-	for (int j = 0; j < dimension; j++) {
-		if (vector[j] % 2 == 0) {
-			contadorPar++;
-			vectorPar->setDimension(contadorPar);
-			vectorPar->setElemento(contadorPar - 1, vector[j]);
-		}
-	 }
-
-	 //Impares
 	 for (int i = 0; i < dimension; i++) {
 		if (vector[i] % 2 != 0) {
 			contadorImpar++;
@@ -181,15 +171,17 @@ void CVector::paresDerecha() {
 		}
 	 }
 
-	 int h = 0;
-	 for (h = 0; h < vectorPar->dimension; h++) {
-		vector[h] = vectorPar->getElemento(h);
+	 for (int j = 0; j < dimension; j++) {
+		if (vector[j] % 2 == 0) {
+			contadorPar++;
+			vectorPar->setDimension(contadorPar);
+			vectorPar->setElemento(contadorPar - 1, vector[j]);
+		}
 	 }
 
-	 int m = h;
-	 for (int k = 0; k < vectorImpar->dimension; k++) {
-		vector[m] = vectorImpar->getElemento(k);
-		m++;
+	 int i = 0;
+	 for (i = 0; i < vectorPar->dimension; i++) {
+		vector[i] = vectorPar->getElemento(i);
 	 }
 }
 

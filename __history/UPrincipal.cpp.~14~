@@ -45,3 +45,33 @@ void __fastcall TForm1::Button3Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+	mostrarSGVector(SGVector, vector1);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Devolverelementorepetido1Click(TObject *Sender)
+{
+	cargarSGVector(SGVector, vector1);
+	EResultado->Text = vector1->devolverElementoRepetido();
+	mostrarSGVector(SGVector, vector1);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::intercalar1Click(TObject *Sender)
+{
+	cargarSGVector(SGVector, vector1);
+	vector1->intercalarImparesPares();
+	mostrarSGVector(SGVector, vector1);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::eliminarPrimos1Click(TObject *Sender)
+{
+	cargarSGVector(SGVector, vector1);
+	vector1->eliminarPrimos();
+	mostrarSGVector(SGVector, vector1);
+}
+//---------------------------------------------------------------------------
+

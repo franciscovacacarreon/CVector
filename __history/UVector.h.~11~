@@ -25,7 +25,6 @@ class CVector{
 		int sumarPosicionImpar();
 		void voltearVector();
 		int devolverMayor();
-		void paresDerecha();
 };
 
 #endif

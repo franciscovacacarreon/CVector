@@ -157,41 +157,5 @@ int CVector::devolverMayor(){
 	return mayor;
 }
 
-void CVector::paresDerecha() {
-	CVector *vectorPar = new CVector();
-	CVector *vectorImpar = new CVector();
-	int contadorPar = 0;
-	int contadorImpar = 0;
-
-	//Pares
-	for (int j = 0; j < dimension; j++) {
-		if (vector[j] % 2 == 0) {
-			contadorPar++;
-			vectorPar->setDimension(contadorPar);
-			vectorPar->setElemento(contadorPar - 1, vector[j]);
-		}
-	 }
-
-	 //Impares
-	 for (int i = 0; i < dimension; i++) {
-		if (vector[i] % 2 != 0) {
-			contadorImpar++;
-			vectorImpar->setDimension(contadorImpar);
-			vectorImpar->setElemento(contadorImpar - 1, vector[i]);
-		}
-	 }
-
-	 int h = 0;
-	 for (h = 0; h < vectorPar->dimension; h++) {
-		vector[h] = vectorPar->getElemento(h);
-	 }
-
-	 int m = h;
-	 for (int k = 0; k < vectorImpar->dimension; k++) {
-		vector[m] = vectorImpar->getElemento(k);
-		m++;
-	 }
-}
-
 
 
